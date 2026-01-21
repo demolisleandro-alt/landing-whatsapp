@@ -1,57 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Acceso</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acceso a la plataforma</title>
 
+  <!-- Fuerza HTTPS y redirección correcta en móviles -->
   <script>
-    window.onload = function () {
-      setTimeout(function () {
-        window.location.href =
-          "https://wa.me/5491140386691?text=Hola%20%F0%9F%98%8D.%20Quiero%20acceder%20a%20la%20plataforma.";
-      }, 500);
-    };
+    window.location.replace(
+      "https://wa.me/5491140386691?text=Hola%20😍.%20Quiero%20acceder%20a%20la%20plataforma."
+    );
   </script>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
-    .box {
-      max-width: 320px;
-    }
-    .loader {
-      border: 5px solid #e0e0e0;
-      border-top: 5px solid #25D366;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      animation: spin 1s linear infinite;
-      margin: 0 auto 15px;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    p {
-      font-size: 15px;
-      color: #333;
-    }
-  </style>
 </head>
-
 <body>
-  <div class="box">
-    <div class="loader"></div>
-    <p>Redirigiendo a WhatsApp…</p>
-  </div>
+  <p>Redirigiendo a WhatsApp…</p>
 </body>
 </html>
