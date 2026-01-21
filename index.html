@@ -2,27 +2,56 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Conectando con WhatsApp</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body style="margin:0; background:#e9f7ef; display:flex; justify-content:center; align-items:center; height:100vh; font-family:Arial, sans-serif;">
-  <div style="text-align:center;">
-    <div style="width:50px; height:50px; border:5px solid #b6e2c6; border-top:5px solid #25d366; border-radius:50%; margin:0 auto 20px; animation:spin 1s linear infinite;"></div>
-    <h2 style="color:#1e8449;">Conectando con WhatsApp…</h2>
-    <p style="color:#2ecc71;">Te redirigiremos en un momento</p>
-  </div>
+  <title>Acceso</title>
 
   <script>
-    setTimeout(function () {
-      window.location.href = "https://wa.me/5491130338153?text=Hola%2C%20quiero%20acceder%20a%20la%20oferta%20inicial";
-    }, 1200);
+    window.onload = function () {
+      setTimeout(function () {
+        window.location.href =
+          "https://wa.me/5491140386691?text=Hola%20%F0%9F%98%8D.%20Quiero%20acceder%20a%20la%20plataforma.";
+      }, 500);
+    };
   </script>
 
   <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .box {
+      max-width: 320px;
+    }
+    .loader {
+      border: 5px solid #e0e0e0;
+      border-top: 5px solid #25D366;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 15px;
+    }
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+    p {
+      font-size: 15px;
+      color: #333;
+    }
   </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="loader"></div>
+    <p>Redirigiendo a WhatsApp…</p>
+  </div>
 </body>
 </html>
