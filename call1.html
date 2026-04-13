@@ -51,17 +51,12 @@
     <p>Te redirigimos en un momento...</p>
   </div>
 
-  <script>
-    // REDIRECCIÓN SEGURA (FUNCIONA EN TODOS LOS DISPOSITIVOS)
-    setTimeout(function(){
-      window.location.href = "https://wa.me/5491128887461?text=Hola%20quiero%20informacion%20para%20jugar";
-    }, 300);
+<script>
+setTimeout(function(){
+  window.location = "https://api.whatsapp.com/send?phone=5491128887461&text=Hola%20quiero%20información%20para%20jugar";
+}, 500);
+</script>
 
-    // BACKUP (por si WhatsApp bloquea)
-    setTimeout(function(){
-      window.open("https://wa.me/5491128887461?text=Hola%20quiero%20informacion%20para%20jugar", "_self");
-    }, 800);
-  </script>
-
+  
 </body>
 </html>
