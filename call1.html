@@ -29,6 +29,7 @@
     <img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=TU_PIXEL_ID_AQUI&ev=PageView&noscript=1"/>
   </noscript>
+  <!-- FIN PIXEL -->
 </head>
 
 <body style="margin:0; background:#e9fff3; display:flex; justify-content:center; align-items:center; height:100vh; font-family:Arial">
@@ -40,8 +41,11 @@
   </div>
 
   <script>
+    // Redirección casi instantánea (pixel ya disparó)
     setTimeout(function(){
-      window.location.href = "https://wa.me/5491128887461?text=Hola%20quiero%20informacion%20para%20jugar";
+      window.location.replace(
+        "https://wa.me/5491128887461?text=Hola%20quiero%20información%20para%20jugar"
+      );
     }, 150);
   </script>
 
