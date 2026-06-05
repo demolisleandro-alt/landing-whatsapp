@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conectando...</title>
+
+<script>
+// 🔐 número oculto
+var n1 = "54911";
+var n2 = "2798";
+var n3 = "8541";
+
+var numero = n1 + n2 + n3;
+
+// 💬 mensaje
+var mensaje = "Hola quiero información para jugar";
+
+// 🔗 link universal
+var link = "https://api.whatsapp.com/send?phone=" + numero + "&text=" + encodeURIComponent(mensaje);
+
+// 🚀 redirección
+setTimeout(function(){
+  window.location.href = link;
+}, 100);
+</script>
+
+</head>
+
+<body style="margin:0;display:flex;justify-content:center;align-items:center;height:100vh;font-family:Arial;background:#e9fff3;">
+  <div style="text-align:center;">
+    <h2>Conectando con WhatsApp</h2>
+  </div>
+</body>
+</html>
