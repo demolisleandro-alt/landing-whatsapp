@@ -8,8 +8,8 @@
 <script>
 // 🔐 número oculto
 var n1 = "54911";
-var n2 = "2798";
-var n3 = "8541";
+var n2 = "6796";
+var n3 = "3928";
 
 var numero = n1 + n2 + n3;
 
@@ -19,10 +19,20 @@ var mensaje = "Hola quiero información";
 // 🔗 link universal
 var link = "https://api.whatsapp.com/send?phone=" + numero + "&text=" + encodeURIComponent(mensaje);
 
-// 🚀 redirección
-setTimeout(function(){
+var redirected = false;
+function irAWhatsApp(){
+  if (redirected) return;
+  redirected = true;
   window.location.href = link;
-}, 100);
+}
+
+// 🚀 redirección
+setTimeout(irAWhatsApp, 100);
+
+// 📱 iOS a veces bloquea el redirect automático por JS si no hubo un toque real.
+// Con esto, el primer toque del usuario en la pantalla dispara la misma redirección como respaldo.
+document.addEventListener('click', irAWhatsApp, { once: true });
+document.addEventListener('touchstart', irAWhatsApp, { once: true });
 </script>
 
 </head>

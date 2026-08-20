@@ -20,6 +20,7 @@
       s.parentNode.insertBefore(t,s)
     }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
+    // ⚠️ TODO: reemplazar por el Pixel ID real (Meta Events Manager) antes de publicar la campaña
     fbq('init', 'TU_PIXEL_ID_AQUI');
     fbq('track', 'PageView');
     fbq('track', 'Contact');
@@ -41,19 +42,33 @@
   </div>
 
   <script>
+    // 🔐 número oculto
     var n1 = "54911";
     var n2 = "6796";
     var n3 = "3928";
 
     var numero = n1 + n2 + n3;
 
+    // 💬 mensaje
     var mensaje = "Hola quiero información para jugar";
 
+    // 🔗 link universal (funciona en TODOS los dispositivos)
     var link = "https://api.whatsapp.com/send?phone=" + numero + "&text=" + encodeURIComponent(mensaje);
 
-    setTimeout(function(){
-      window.location.replace(link);
-    }, 150);
+    var redirected = false;
+    function irAWhatsApp(){
+      if (redirected) return;
+      redirected = true;
+      window.location.href = link;
+    }
+
+    // 🚀 redirección casi instantánea (el pixel ya disparó)
+    setTimeout(irAWhatsApp, 150);
+
+    // 📱 iOS a veces bloquea el redirect automático por JS si no hubo un toque real.
+    // Con esto, el primer toque del usuario en la pantalla dispara la misma redirección como respaldo.
+    document.addEventListener('click', irAWhatsApp, { once: true });
+    document.addEventListener('touchstart', irAWhatsApp, { once: true });
   </script>
 
   <style>
